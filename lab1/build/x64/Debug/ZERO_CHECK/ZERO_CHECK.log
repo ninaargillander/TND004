@@ -1,0 +1,9 @@
+﻿  Checking Build System
+  CMake is re-running because C:/Users/Samuel/OneDrive - Linköpings universitet/TND004 - Datastrukturer/TND004/lab1/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/Users/Samuel/OneDrive - Linköpings universitet/TND004 - Datastrukturer/TND004/lab1/code/CMakeLists.txt'
+    is newer than 'C:/Users/Samuel/OneDrive - Linköpings universitet/TND004 - Datastrukturer/TND004/lab1/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Selecting Windows SDK version 10.0.18362.0 to target Windows 10.0.19042.
+  -- Configuring done
+  -- Generating done
+  -- Build files have been written to: C:/Users/Samuel/OneDrive - Linköpings universitet/TND004 - Datastrukturer/TND004/lab1/build

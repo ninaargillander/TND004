@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Samuel\OneDrive - Linköpings universitet\TND004 - Datastrukturer\TND004\lab2\code\lab2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Samuel\OneDrive - Linköpings universitet\TND004 - Datastrukturer\TND004\lab2\code\set.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Samuel\OneDrive - Linköpings universitet\TND004 - Datastrukturer\TND004\lab2\code\set.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Samuel\OneDrive - Linköpings universitet\TND004 - Datastrukturer\TND004\lab2\code\node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Samuel\OneDrive - Linköpings universitet\TND004 - Datastrukturer\TND004\lab2\code\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6DB7F805-A804-32DB-BAC4-B194C0DD27C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{56567333-D32B-32D2-8237-385D8230B9EC}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

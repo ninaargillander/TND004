@@ -11,7 +11,7 @@
 #include <cassert>
 
 /****************************************
- * Declarations                          *
+ * Declarations                          * 
  *****************************************/
 
 // generic class to write an item to a stream
@@ -50,6 +50,10 @@ std::vector<int>::iterator stable_partition(std::vector<int>::iterator first,
 // Divide-and-conquer algorithm
 void stable_partition(std::vector<int>& V, std::function<bool(int)> p) {
     TND004::stable_partition(std::begin(V), std::end(V), p);  // call auxiliary function
+
+    /*std::cout << "\nSequence_out: ";
+    std::copy(std::begin(V), std::end(V), std::ostream_iterator<int>{std::cout, " "});
+    std::cout << std::endl;*/
 }
 }  // namespace TND004
 
@@ -201,10 +205,31 @@ void execute(std::vector<int>& V, const std::vector<int>& res) {
     assert(_copy == res);  // compare with the expected result
 }
 
+
 // Iterative algorithm
 void TND004::stable_partition_iterative(std::vector<int>& V, std::function<bool(int)> p) {
-    // IMPLEMENT before Lab1 HA
+
+    size_t size_V = V.size();
+    std::vector<int> T(size_V), F(size_V);  //Creates new vectors for elements of V returning true/false, both large enough to fit all of V.
+    
+    size_t t_count = 0;
+
+    for (size_t i = 0; i < size_V; ++i) {
+        int temp = V[i];
+
+        if (p(temp)) {
+                T[t_count] = temp;
+                ++t_count;
+        }
+        else    F[i - t_count] = temp;
+    }
+
+    for (size_t i = 0; i < size_V; ++i) {
+        if (i < t_count)    V[i] = T[i];            //Place the elements returning true into V, from the front
+        else                V[i] = F[i - t_count];  //Place the elements returning false into V, from after the true elements
+    }
 }
+
 
 // Auxiliary function that performs the stable partition recursively
 // Divide-and-conquer algorithm: stable-partition the sub-sequence starting at first and ending at
@@ -214,9 +239,19 @@ void TND004::stable_partition_iterative(std::vector<int>& V, std::function<bool(
 std::vector<int>::iterator TND004::stable_partition(std::vector<int>::iterator first,
                                             std::vector<int>::iterator last,
                                             std::function<bool(int)> p) {
-    // IMPLEMENT
 
-    return first;  // delete this line
+    if (first == last) return first;    //Base case: length 0
+
+    if (last == first+1) {              //Base case: length 1
+        if (p(*first))      return last;    //Element returns true for condidition p -> Return it. after element
+        else                return first;   //Element returns false for condidition p -> Return it. before element
+    }
+
+    std::vector<int>::iterator mid = first + (last - first) / 2;
+    
+    return std::rotate(TND004::stable_partition(first, mid, p), mid, TND004::stable_partition(mid, last, p));
+
+
 }  // end of function
 
 
