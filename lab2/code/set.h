@@ -132,6 +132,9 @@ private:
 
     // Add here, if any
 
+    void _insert_sorted(int n);
+    bool _is_subset_of(const Set& S) const;
+
     /** Insert a new Node storing val after the Node pointed by p
      *
      * \param p pointer to a Node
@@ -167,7 +170,9 @@ private:
     friend bool operator<=(const Set& S1, const Set& S2) {
         // IMPLEMENT
 
-        return false;  // remove this line
+        //if (S1.counter > S2.counter) return false;          //A larger Set cannot be a subset of a smaller Set
+
+        return (S1.counter <= S2.counter && S1._is_subset_of(S2));                              //Try subset using helper function
     }
 
     /** Test whether Set S1 and S2 represent the same set
@@ -179,19 +184,20 @@ private:
     friend bool operator==(const Set& S1, const Set& S2) {
         // IMPLEMENT
 
-        return false;  // remove this line
+        return(S1.counter == S2.counter && S1._is_subset_of(S2));
+
     }
 
     /** Test whether Set S1 and S2 represent different sets
      *
      * S1 != S2, iff (S1 == S2) is false
-     * Return true, if S1 stores the same elements as Set S2, otherwise false
+     * Return FALSE??, if S1 stores the same elements as Set S2, otherwise false
      *
      */
     friend bool operator!=(const Set& S1, const Set& S2) {
         // IMPLEMENT
 
-        return false;  // remove this line
+        return (!(S1==S2));
     }
 
     /** Test whether Set S1 is a strict subset of Set S2
@@ -202,7 +208,7 @@ private:
     friend bool operator<(const Set& S1, const Set& S2) {
         // IMPLEMENT
 
-        return false;  // remove this line
+        return (S1.counter < S2.counter && S1._is_subset_of(S2));
     }
 
     /** Overloaded operator+: Set union S1+S2
