@@ -208,6 +208,7 @@ int main() {
         assert(S2 == S2);
 
         S1 -= S1;
+        
         assert(S1.is_empty());
 
         assert(Set::get_count_nodes() == 7);

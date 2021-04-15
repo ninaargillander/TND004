@@ -132,7 +132,7 @@ private:
 
     // Add here, if any
 
-    void _insert_sorted(int n);
+    //void _insert_sorted(int n);
     bool _is_subset_of(const Set& S) const;
 
     /** Insert a new Node storing val after the Node pointed by p
