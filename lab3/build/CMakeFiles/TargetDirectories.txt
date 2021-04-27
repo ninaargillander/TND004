@@ -1,0 +1,3 @@
+C:/Users/Samuel/OneDrive - LiU/TND004 - Datastrukturer/TND004/lab3/build/CMakeFiles/Lab3.dir
+C:/Users/Samuel/OneDrive - LiU/TND004 - Datastrukturer/TND004/lab3/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Samuel/OneDrive - LiU/TND004 - Datastrukturer/TND004/lab3/build/CMakeFiles/ZERO_CHECK.dir
