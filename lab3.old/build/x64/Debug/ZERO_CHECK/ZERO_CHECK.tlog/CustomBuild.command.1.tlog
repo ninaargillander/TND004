@@ -1,0 +1,10 @@
+^C:\USERS\SAMUEL\ONEDRIVE\DOKUMENT\CMAKETEMP\TND004\LAB3\BUILD\CMAKEFILES\EB62B03B871C9E2C3F1CD4FF663D30D0\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Samuel/OneDrive/Dokument/CMakeTemp/TND004/lab3/code -BC:/Users/Samuel/OneDrive/Dokument/CMakeTemp/TND004/lab3/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Samuel/OneDrive/Dokument/CMakeTemp/TND004/lab3/build/TND004-Lab-3.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

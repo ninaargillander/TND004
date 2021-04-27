@@ -131,7 +131,7 @@ Set& Set::operator+=(const Set& S)
 	Node* pos_S = S.head->next;
 	Node* pos_this = head;
 
-	while (pos_S != S.tail && pos_this != tail) {
+	while (pos_S != S.tail) {
 		if (pos_S->value < pos_this->next->value || pos_this->next == tail) {
 			_insert(pos_this, pos_S->value);
 			pos_S = pos_S->next;
@@ -251,32 +251,13 @@ void Set::_remove(Node* p)
 }
 
 
-////Insert a new Node in the correct position
-//void Set::_insert_sorted(int n)
-//{
-//	Node* p = head;
-//
-//	while ((p->next != tail) && (p->next->value < n))
-//	{ //Find correct place in set to insert
-//		p = p->next;
-//	}
-//
-//	if ((p->next != tail) && p->next->value == n) //Do nothing if the value is in the Set
-//	{
-//		//std::cout << n << " already exists in set!"; //For debugging
-//		return;
-//	}
-//	//Else insert a new node with value n after p
-//	else _insert(p, n);
-//
-//}
-
 
 //Helper for friend subset operator
 bool Set::_is_subset_of(const Set& S) const 
 {
 	if (counter > S.counter) {
 		std::cout << "ERROR in _is_subset_of(const Set& S) : S larger than this!\n";
+		return false;
 	}
 
 	Node* temp_A = head->next;

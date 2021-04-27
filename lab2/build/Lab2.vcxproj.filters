@@ -7,6 +7,7 @@
     <ClCompile Include="C:\Users\Samuel\OneDrive - Linköpings universitet\TND004 - Datastrukturer\TND004\lab2\code\set.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\code\node.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\Samuel\OneDrive - Linköpings universitet\TND004 - Datastrukturer\TND004\lab2\code\set.h">
@@ -15,9 +16,6 @@
     <ClInclude Include="C:\Users\Samuel\OneDrive - Linköpings universitet\TND004 - Datastrukturer\TND004\lab2\code\node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="C:\Users\Samuel\OneDrive - Linköpings universitet\TND004 - Datastrukturer\TND004\lab2\code\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
