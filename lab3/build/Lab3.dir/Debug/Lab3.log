@@ -1,6 +1,31 @@
+<<<<<<< HEAD
 ﻿  frequency_table.cpp
   test1.cpp
   test2.cpp
   test3.cpp
   Generating Code...
   Lab3.vcxproj -> C:\Users\Samuel\OneDrive - LiU\TND004 - Datastrukturer\TND004\lab3\build\Debug\Lab3.exe
+=======
+﻿  test1.cpp
+  test2.cpp
+C:\Users\Samuel\OneDrive - LiU\TND004 - Datastrukturer\TND004\lab3\code\BinarySearchTree.h(176,17): error C2562: 'BinarySearchTree<int>::find_pred': 'void' function returning a value
+C:\Users\Samuel\OneDrive - LiU\TND004 - Datastrukturer\TND004\lab3\code\BinarySearchTree.h(174): message : see declaration of 'BinarySearchTree<int>::find_pred'
+C:\Users\Samuel\OneDrive - LiU\TND004 - Datastrukturer\TND004\lab3\code\BinarySearchTree.h(174): message : while compiling class template member function 'void BinarySearchTree<int>::find_pred(const Comparable &,const BinarySearchTree<Comparable>::Node *,Comparable &) const'
+          with
+          [
+              Comparable=int
+          ]
+C:\Users\Samuel\OneDrive - LiU\TND004 - Datastrukturer\TND004\lab3\code\BinarySearchTree.h(160): message : see reference to function template instantiation 'void BinarySearchTree<int>::find_pred(const Comparable &,const BinarySearchTree<Comparable>::Node *,Comparable &) const' being compiled
+          with
+          [
+              Comparable=int
+          ]
+C:\Users\Samuel\OneDrive - LiU\TND004 - Datastrukturer\TND004\lab3\code\test2.cpp(20): message : see reference to class template instantiation 'BinarySearchTree<int>' being compiled
+C:\Users\Samuel\OneDrive - LiU\TND004 - Datastrukturer\TND004\lab3\code\BinarySearchTree.h(184,17): error C2562: 'BinarySearchTree<int>::find_pred': 'void' function returning a value
+C:\Users\Samuel\OneDrive - LiU\TND004 - Datastrukturer\TND004\lab3\code\BinarySearchTree.h(174): message : see declaration of 'BinarySearchTree<int>::find_pred'
+C:\Users\Samuel\OneDrive - LiU\TND004 - Datastrukturer\TND004\lab3\code\BinarySearchTree.h(192,17): error C2562: 'BinarySearchTree<int>::find_pred': 'void' function returning a value
+C:\Users\Samuel\OneDrive - LiU\TND004 - Datastrukturer\TND004\lab3\code\BinarySearchTree.h(174): message : see declaration of 'BinarySearchTree<int>::find_pred'
+  test3.cpp
+  frequency_table.cpp
+  Generating Code...
+>>>>>>> a3f8c731a6e143bee47654c2084d0e7ef2983e16
