@@ -156,13 +156,8 @@ public:
     const std::pair<Comparable, Comparable> find_pred_succ(const Comparable& x) {
         Comparable pred{ x }, succ{ x };
 
-
         find_pred(x, root, pred);
-        //Node* pred_ptr = find_pred(x, root, pred);
-        //if (pred_ptr) pred = pred_ptr->element;
-
-        //Node* succ_ptr = find_succ(x, root, succ);
-        //if (succ_ptr) succ = succ_ptr->element;
+        find_succ(x, root, succ);
 
         return std::make_pair(pred, succ);
     }
@@ -173,25 +168,48 @@ private:
 
     void find_pred(const Comparable& x, const Node* t, Comparable& pred) const {
 
-        if (!t) return nullptr;
+        if (!t) return;
 
         if (t->element >= x) {
 
             if (t->left) {
-               find_pred(x, t->left, pred);
-            }
-            else {
-                
-            }
-        }
-        if (t->element < x) {;
-            if 
-            if (t->right){
-               find_pred(x, t->right, pred);
+                find_pred(x, t->left, pred);
             }
             
         }
+        if (t->element < x) {
+            if (t->element > pred || pred == x) {
+                pred = t->element;
+            }
+            if (t->right){
+               find_pred(x, t->right, pred);
+            }
+        }
+        return;
+    }
 
+    void find_succ(const Comparable& x, const Node* t, Comparable& succ) const {
+
+        if (!t) return;
+
+        if (t->element > x) {
+
+            if (t->element < succ || succ == x) {
+                succ = t->element;
+            }
+
+            if (t->left) {
+                find_succ(x, t->left, succ);
+            }
+
+        }
+        if (t->element <= x) {
+            
+            if (t->right) {
+                find_succ(x, t->right, succ);
+            }
+        }
+        return;
     }
 
 
