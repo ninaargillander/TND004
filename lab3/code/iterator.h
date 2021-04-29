@@ -20,7 +20,56 @@ public:
 
     // Exercise 2: ADD CODE   
 
+    // Default constructor
+    Iterator(): ptr{nullptr}{}
 
+    // operator*
+   /* Iterator& operator*(const Iterator& it) {
+
+    }
+    */
+    // operator->
+    Node* operator->() {
+        return ptr;
+    }
+/*
+    // operator==
+    Iterator& operator==(const Iterator& it) {
+
+    }
+
+    // operator!=
+    Iterator& operator!=(const Iterator& it) {
+
+    }
+
+    // operator++ preincrement
+    Iterator& operator++() {
+
+    }
+
+    // operator++ postincrement
+    Iterator operator++(Iterator it) {
+
+    }
+
+    // operator-- predecrement
+    Iterator& operator--() {
+
+    }
+
+    // operator-- postdecrement
+    Iterator operator--(Iterator it) {
+
+    }*/
+
+ 
+private:   
+    Node* ptr;
+
+    // contructor given a pointer to a tree's node 
+    Iterator(Node* t): ptr{t}{}
+  
    template <typename Comparable>
     friend class BinarySearchTree;
 };

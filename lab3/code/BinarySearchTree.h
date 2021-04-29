@@ -164,10 +164,12 @@ public:
 
 private:
     Node *root;
+    Iterator it;
 
+   
 
     void find_pred(const Comparable& x, const Node* t, Comparable& pred) const {
-
+        std::cout << it->ptr << std::endl;
         if (!t) return;
 
         if (t->element >= x) {
@@ -212,6 +214,50 @@ private:
         return;
     }
 
+    // For iterators
+    Node* find_successor(Node* t) const {
+        if (!t) return nullptr;           // If t is nullptr
+
+        if (t->right) {                   // If successor is child 
+            return findMin(t->right);       // find smallest value in right subtree
+        }
+        else {                            // If successor is parent 
+            if (t->parent->left == t) {       // If t is left child of parent
+               return t->parent;                 // then parent is successor
+                
+            }
+            else if (t->parent->right == t){  // If t is right child of parent
+              t = find_successor(t);              // check next parent
+            }
+            else {                            // if successor doesn't exist in tree
+                return nullptr;
+
+            }
+        }
+        return t;
+    }
+
+    Node* find_predecessor(Node* t) const {
+        if (!t) return nullptr;           // If t is nullptr
+
+        if (t->left) {                   // If successor is child 
+            return findMax(t->left);       // find largest value in left subtree
+        }
+        else {                            // If successor is parent 
+            if (t->parent->right == t) {       // If t is right child of parent
+                return t->parent;                 // then parent is successor
+
+            }
+            else if (t->parent->left == t) {  // If t is left child of parent
+                t = find_predecessor(t);              // check next parent
+            }
+            else {                            // if successor doesn't exist in tree
+                return nullptr;
+
+            }
+        }
+        return t;
+    }
 
 
 
